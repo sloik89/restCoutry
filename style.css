@@ -117,3 +117,23 @@ transition: 0.2s linear;
     padding-left: 1rem;
     margin-top: 1rem;
 }
+
+.filters{
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+#query{
+    padding: 1rem 2rem;
+    border:none;
+    font-size: 1.2rem;
+    background-color: var(--very-light-grey);
+    border-radius: 1rem;
+}
+
+input#query:focus{
+    outline: 2px solid var(--dark-blue);
+}
+input#query:active {
+    border: none;
+}

@@ -6,10 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rest Api</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <header>
+        <h1>Where in the world?</h1>
+        <span><i class="fa-regular fa-moon"></i>dark mode</span>
+    </header>
+    <main id="root">
+        <div class="filters">
+            <input type="text" id="query" placeholder="Search for country">
+            <select name="region" id="region">
+                <option value="">Filter by region</option>
+                <option value="Europe">Europe</option>
+                <option value="Americas">America</option>
+                <option value="Asia">Asia</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
 
+        </div>
+    </main>
+    <script type="module" src="dom-utils.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
+
 
 </html>
