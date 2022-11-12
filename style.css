@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root{
+    --very-light-grey:hsl(0, 0%, 98%);
+    --dark-blue:hsl(209, 23%, 22%);
+    --dark-blue-100:hsl(207, 26%, 17%);
+    --dark-blue-200: hsl(200, 15%, 8%);
+    --white:hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--white);
+    transition:background-color 0.2s linear;
+}
+body.dark-theme{
+    background-color: var(--dark-blue);
+    color:white;
+  
+}
+body.dark-theme .card{
+    background-color: var(--dark-blue-100);
+    box-shadow: 8px 8px 24px 0px rgb(4, 4, 4);
+}
+body.dark-theme i {
+    color:white;
+}
+ul{
+    list-style: none;
+}
+#root{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1380px;
+}
+header{
+    width: 90%;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--very-light-grey);
+    margin-bottom: 2rem;
+}
+header span{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+header span i{
+    font-size: 2rem;
+    cursor: pointer;
+    color:var(--dark-blue);
+    transition: all 0.4s linear
+}
+header span i:hover{
+    transform:scale(1.1);
+}
+.countries__wrapper{
+    display: grid;
+  
+    gap: 3rem;
+    
+}
+@media screen and (max-width:600px){
+    .countries__wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width:600px) {
+    .countries__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width:900px) {
+    .countries__wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width:1200px) {
+    .countries__wrapper {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.card{
+ background-color: var(--very-light-grey);
+box-shadow: 8px 8px 24px 0px rgba(227, 227, 227, 1);
+border-radius: 1rem;
+overflow: hidden;
+cursor: pointer;
+transition: 0.2s linear;
+ 
+}
+.card:hover{
+    transform:scale(1.05);
+}
+.card:hover .country__info{
+   
+}
+.card img{
+    width: 100%;
+    aspect-ratio: 160/98;
+}
+.country__info{
+    padding: 1rem;
+    
+}
+.country__info p{
+    font-weight: bold;
+}
+.country__info p span{
+    font-weight: normal;
+}
+.country__name{
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
