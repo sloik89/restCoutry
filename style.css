@@ -14,14 +14,29 @@ body{
     background-color: var(--white);
     transition:background-color 0.2s linear;
 }
+a{
+    text-decoration: none;
+  
+}
+body {
+    color:black;
+}
+body a {
+    color:black;
+}
 body.dark-theme{
     background-color: var(--dark-blue);
     color:white;
+
   
 }
 body.dark-theme .card{
     background-color: var(--dark-blue-100);
     box-shadow: 8px 8px 24px 0px rgb(4, 4, 4);
+    color:white;
+}
+body.dark-theme .card a {
+    color:white;
 }
 body.dark-theme i {
     color:white;
@@ -123,6 +138,9 @@ transition: 0.2s linear;
     display: flex;
     justify-content: space-between;
 }
+.filters.hidden{
+    display: none;
+}
 #query{
     padding: 1rem 2rem;
     border:none;
@@ -136,4 +154,89 @@ input#query:focus{
 }
 input#query:active {
     border: none;
+}
+
+.country{
+   
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    background-color: var(--very-light-grey);
+   
+}
+.country a {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:black;
+}
+.country__content{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    align-items: center;
+}
+.info__col h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.country__info-columns{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.borders__country{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+
+}
+.borders__country div{
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap:0.5rem;
+}
+.borders__country p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.borders__country div span {
+    background-color: var(--white);
+    box-shadow: 8px 8px 24px 0px rgb(212, 210, 210);
+    padding: 0.4rem 1.9rem;
+    font-size: 1rem;
+    color: black;
+}
+.img__container img{
+    width: 100%;
+}
+@media screen and (min-width:700px){
+    .country__content{
+        flex-direction: row;
+    }
+    .img__container{
+      
+        flex-basis: 50%;
+        
+    }
+    .country__info{
+        flex-basis: 50%;
+        
+      
+    }
+}
+@media screen and (min-width:1000px) {
+    .country__info-columns {
+            flex-direction: row;
+            align-items: flex-start;
+            gap:5rem;
+        }
+        .info__col:last-child{
+            margin-top: 4.5rem;
+        }
+}
+.info__col p {
+    margin-bottom: 1rem;
 }

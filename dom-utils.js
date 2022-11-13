@@ -1,12 +1,12 @@
 
 const createCountryElement = (country) => {
    
-    const {capital, country:nameCountry, flag,population,region} = country
+    const {capital, country:nameCountry, flag,population,region,code} = country
     const countryElement = document.createElement('li')
     countryElement.className = 'card'
   
     countryElement.innerHTML = `
-    <a href="?country=${nameCountry}">
+    <a href="?country=${code}">
      <img src="${flag}" />
      <h2 class="country__name">
         ${nameCountry}
@@ -35,7 +35,7 @@ export const renderCountries = (countries) => {
     const rootElement = document.querySelector('#root')
     const ul = rootElement.querySelector('.countries__wrapper')
       ul && ul.remove()
-     console.log(ul);
+     
     rootElement.appendChild(createListElement(countries))
    
 }
